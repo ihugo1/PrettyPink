@@ -1,0 +1,47 @@
+/*-------------------------------------------------------
+# Imports
+---------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*-------------------------------------------------------
+# Normalize 
+---------------------------------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  font-family: "Montserrat";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+
+  list-style: none;
+}
+button{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --spacing-xxs: 4px;   
+  --spacing-xs: 8px;    
+  --spacing-sm: 12px;  
+  --spacing-md: 16px;   
+  --spacing-lg: 24px;   
+  --spacing-xl: 32px;  
+  --spacing-xxl: 40px;  
+
+  --font-size-xxs: 10px; 
+  --font-size-xs: 12px;  
+  --font-size-sm: 14px; 
+  --font-size-md: 16px;  
+  --font-size-lg: 20px;  
+  --font-size-xl: 24px;  
+  --font-size-xxl: 32px; 
+  --font-size-xxxl: 40px; 
+
+  --background-color: #f5f5f5;
+  --primary-color: #ce1782;
+  --white-color: #fff;
+  --black-color: #000;
+}
