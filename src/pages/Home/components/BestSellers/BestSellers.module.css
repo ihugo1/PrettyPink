@@ -40,3 +40,11 @@
     color: var(--white-color);
   }
 }
+/* Responsive styles */
+@media (max-width: 768px) {
+  .best-sellers{
+    .link{
+      width: 90%;
+    }
+  }
+}

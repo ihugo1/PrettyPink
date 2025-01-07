@@ -1,3 +1,4 @@
 import { Navbar } from "./Navbar/Navbar";
 import { ProductCard } from "./ProductCard/ProductCard";
-export { Navbar, ProductCard };
+import { Footer } from "./Footer/Footer";
+export { Navbar, ProductCard, Footer };
