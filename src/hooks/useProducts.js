@@ -1,6 +1,6 @@
 import { useState } from "react";
 const API_URL =
-  "https://67101f4da85f4164ef2d2416.mockapi.io/fashionplaceapi/v1/products";
+  "https://67101f4da85f4164ef2d2416.mockapi.io/fashionplaceapi/v1/";
 
 export const useProducts = () => {
   const [products, setProducts] = useState([]);

@@ -1,0 +1,23 @@
+.products{
+  margin-top: 10vh;
+  display: flex;
+  padding: var(--spacing-sm);
+  background-color: var(--background-color);
+  .loading{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loading-text{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .products{
+    flex-direction: column;
+  }
+}

@@ -7,7 +7,7 @@ export const BestSellers = () => {
   const { products, loading, fetchProducts } = useProducts();
 
   useEffect(() => {
-    fetchProducts("?best_seller=true");
+    fetchProducts("products?best_seller=true");
   }, []);
 
   return (

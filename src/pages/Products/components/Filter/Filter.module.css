@@ -1,0 +1,27 @@
+.products-filter{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 20%;
+  border-right: 1px solid var(--black-color);
+  padding: var(--spacing-md);
+  .filter-text{
+    font-size: var(--font-size-md);
+  }
+  .categories-select{
+    margin-top: var(--spacing-sm);
+    option{
+      font-size: var(--font-size-sm);
+    }
+  }
+  .categories-select:focus{
+    outline: none;
+  }
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .products-filter{
+    width: 100%;
+    border: none;
+  }
+}

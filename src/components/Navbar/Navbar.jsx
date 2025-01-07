@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./Navbar.module.css";
-import { FaBars } from "react-icons/fa6";
-import { FaCartShopping, FaXmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { FaBars, FaCartShopping, FaXmark } from "react-icons/fa6";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,10 +11,10 @@ export const Navbar = () => {
   return (
     <nav className={style["navbar"]}>
       <div className={style["navbar-left"]}>
-        <div className={style["navbar-logo"]}>
+        <Link to="/" className={style["navbar-logo"]}>
           <p className={style["logo-a"]}>PRETTY</p>
           <p className={style["logo-b"]}> P!NK </p>
-        </div>
+        </Link>
       </div>
       <div className={style["navbar-right"]}>
         <button className={style["menu-button"]}>
@@ -38,7 +38,7 @@ export const Navbar = () => {
           <a className={style["navbar-link"]}>
             <FaCartShopping className={style["navbar-link-icon"]} />
           </a>
-          <a className={style["navbar-link"]}>All products</a>
+          <Link to="/products" className={style["navbar-link"]}>All products</Link>
           <a className={style["navbar-link"]}>About us</a>
           <a className={style["navbar-link"]}>Login/Register</a>
         </ul>

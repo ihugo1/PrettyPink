@@ -1,0 +1,13 @@
+.grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  justify-items: center;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .grid{
+    width: 100%;
+  }
+}
