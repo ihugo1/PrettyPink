@@ -38,7 +38,7 @@ export const Navbar = () => {
           <a className={style["navbar-link"]}>
             <FaCartShopping className={style["navbar-link-icon"]} />
           </a>
-          <a className={style["navbar-link"]}>Products</a>
+          <a className={style["navbar-link"]}>All products</a>
           <a className={style["navbar-link"]}>About us</a>
           <a className={style["navbar-link"]}>Login/Register</a>
         </ul>

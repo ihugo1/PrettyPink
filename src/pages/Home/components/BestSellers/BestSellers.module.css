@@ -1,0 +1,42 @@
+.best-sellers {
+  width: 100%;
+  height: auto;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  .title {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+  }
+  .best-sellers-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    justify-items: center;
+  }
+  .link{
+    width: 30%;
+    height: 50px;
+    margin: var(--spacing-lg);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: var(--background-color);
+    transition: all 0.3s ease;
+  }
+  .link:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+}

@@ -1,10 +1,11 @@
-import React from 'react'
-import { HomeHero } from './components/HomeHero/HomeHero'
+import React from "react";
+import { HomeHero, BestSellers } from "./components";
 
 export const Home = () => {
   return (
     <div>
-      <HomeHero/>
+      <HomeHero />
+      <BestSellers />
     </div>
-  )
-}
+  );
+};
