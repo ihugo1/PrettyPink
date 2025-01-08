@@ -16,6 +16,9 @@
 
   list-style: none;
 }
+a{
+  color: var(--color-black);
+}
 button{
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -43,5 +46,6 @@ button{
   --background-color: #e4e2e2;
   --primary-color: #ce1782;
   --white-color: #fff;
-  --black-color: #000;
+  --black-color: #110f10;
+  --gray-color: #747474;
 }

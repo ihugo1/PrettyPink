@@ -1,26 +1,267 @@
 [
   {
-    "id": 1,
-    "name": "tops"
+    "id": "1",
+    "name": "Chic Off Shoulder Letter Print Top",
+    "price": 22.99,
+    "category": "tops",
+    "description": "A trendy off-shoulder top featuring a stylish letter print, perfect for a casual and fashionable look.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_White_20_3.jpg?pad_color=fff&v=1728864069&width=940",
+      "https://lewkin.com/cdn/shop/files/005_609540ea-01be-4347-88a6-8d415e747d89.jpg?pad_color=fff&v=1728864070&width=940",
+      "https://lewkin.com/cdn/shop/files/006_d70289bc-7297-4b34-8e8c-05576bf21049.jpg?v=1728864070"
+    ]
   },
   {
-    "id": 2,
-    "name": "dresses"
+    "id": "2",
+    "name": "Chic Round Neck Long Sleeve Top",
+    "price": 49.99,
+    "category": "tops",
+    "description": "A chic long-sleeve top with a classic round neck, ideal for layering and completing your everyday outfits.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_Dark_20blue_c77a7183-68ca-4897-b55f-aac68bb7b3dc.jpg?pad_color=fff&v=1728266590&width=940",
+      "https://lewkin.com/cdn/shop/files/005_2b0d8643-1a05-459d-ac58-852eb35873eb.jpg?pad_color=fff&v=1728266590&width=940",
+      "https://lewkin.com/cdn/shop/files/006_dca5b06f-03b3-47b3-b299-89faa1b03df9.jpg?v=1728266590"
+    ]
   },
   {
-    "id": 3,
-    "name": "jackets"
+    "id": "3",
+    "name": "Lettered Long Sleeve Crop Tee",
+    "price": 27.99,
+    "category": "tops",
+    "description": "A comfortable and stylish long-sleeve crop tee with a bold lettered design, adding a modern touch to any casual look.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_Green_037bd1c9-6698-496c-b787-f553793105a6.jpg?pad_color=fff&v=1727659632&width=940",
+      "https://lewkin.com/cdn/shop/files/005_a9636ce9-4013-4df3-9148-35b283de8f42.jpg?pad_color=fff&v=1727659632&width=940",
+      "https://lewkin.com/cdn/shop/files/006_1210d29f-3caa-4b90-abde-30e42d3d8706.jpg?v=1727659632"
+    ]
   },
   {
-    "id": 4,
-    "name": "jeans"
+    "id": "4",
+    "name": "Mesh Striped Knotted Mini Dress",
+    "price": 72.99,
+    "category": "dresses",
+    "description": "A sophisticated mini dress with a mesh striped design and knotted detailing, perfect for an evening out or special occasions.",
+    "sizes": ["S", "M"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_gray_7ecd735c-3d06-4069-964f-b93ca410dc67.jpg?v=1713332264",
+      "https://lewkin.com/cdn/shop/files/005_7cc3099c-b18d-419b-8f64-3372794e7243.jpg?pad_color=fff&v=1713333160&width=940",
+      "https://lewkin.com/cdn/shop/files/006_2ea1998e-fa4a-484f-a86c-a0a429a3f46e.jpg?pad_color=fff&v=1713333160&width=940"
+    ]
   },
   {
-    "id": 5,
-    "name": "shorts"
+    "id": "5",
+    "name": "Graceful Off-Shoulder Mini Dress",
+    "price": 37.99,
+    "category": "dresses",
+    "description": "An elegant off-shoulder mini dress, designed to highlight your curves and provide a graceful silhouette.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_6a096f2c-aa20-4089-b2d1-e5a04eb3ad69.jpg?pad_color=fff&v=1725936310&width=940",
+      "https://lewkin.com/cdn/shop/files/003_4200d8a7-737e-432f-bb23-3aaca2be0be6.jpg?pad_color=fff&v=1725936310&width=940",
+      "https://lewkin.com/cdn/shop/files/005_082dc4e5-cc6a-4b45-9c36-d7ee1d050f3e.jpg?pad_color=fff&v=1725936310&width=940"
+    ]
   },
   {
-    "id": 6,
-    "name": "accessories"
+    "id": "6",
+    "name": "Elegant Slit V-Neck Maxi Skirt",
+    "price": 67.99,
+    "category": "dresses",
+    "description": "A classy maxi skirt with a V-neck slit, offering a chic and sophisticated look for evening events or formal occasions.",
+    "sizes": ["S", "M"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_Brown_b6ee1611-4b24-4b42-9344-ab73fad31f5a.jpg?pad_color=fff&v=1725410271&width=940",
+      "https://lewkin.com/cdn/shop/files/004_aac26edd-db8a-49d7-a57e-5e9c42ac88fb.jpg?pad_color=fff&v=1725410271&width=940",
+      "https://lewkin.com/cdn/shop/files/003_b9b37b1f-f22e-4bd9-8404-28efc16297b8.jpg?pad_color=fff&v=1725410271&width=940"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Trendy Oversized Zip-Up Jacket",
+    "price": 96.99,
+    "category": "jackets",
+    "description": "A stylish oversized zip-up jacket, combining comfort and fashion for a casual and trendy vibe.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_Dark_20brown_b98d866b-df47-470c-9a65-ebdad0c04929.jpg?v=1735783168",
+      "https://lewkin.com/cdn/shop/files/004_3330406f-0f51-4c03-96e2-eb79274473c3.jpg?pad_color=fff&v=1735783770&width=940",
+      "https://lewkin.com/cdn/shop/files/005_5cac5089-f716-426b-a31b-7213781ed3a2.jpg?pad_color=fff&v=1735783770&width=940"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Zip-Up Suede Bomber Jacket",
+    "price": 94.99,
+    "category": "jackets",
+    "description": "A luxurious suede bomber jacket with a zip-up closure, offering a blend of comfort, warmth, and high-end style.",
+    "sizes": ["S", "M", "L", "XL"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_4_9d7dd3ab-070f-435f-8806-72dfe24c013e.jpg?pad_color=fff&v=1732847213&width=940",
+      "https://lewkin.com/cdn/shop/files/006_4_804eb65a-3216-40c6-be48-db2a12d90125.jpg?pad_color=fff&v=1732847214&width=940",
+      "https://lewkin.com/cdn/shop/files/007_4_6050628b-79ff-44c5-a5a0-c4362817925c.jpg?pad_color=fff&v=1732847214&width=940"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Embroidered Graphic Buttoned Jacket",
+    "price": 146.99,
+    "category": "jackets",
+    "description": "A stunning embroidered jacket with graphic designs and buttoned detailing, perfect for adding a unique touch to your wardrobe.",
+    "sizes": ["M", "L"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_black_28303d0f-3c23-42b3-a545-c4cb569a40fe.jpg?pad_color=fff&v=1730439910&width=940",
+      "https://lewkin.com/cdn/shop/files/004_9f8eccaf-5453-4380-8892-ac3484fd3f08.jpg?pad_color=fff&v=1730439910&width=940",
+      "https://lewkin.com/cdn/shop/files/006_fa39879e-3bb7-4605-8d07-5c667c82723e.jpg?pad_color=fff&v=1730439910&width=940"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Kathy Slim-Fit Flared Jeans",
+    "price": 58.99,
+    "category": "jeans",
+    "description": "A pair of slim-fit flared jeans that hug your body and flare out at the bottom for a flattering and fashionable look.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_6a6ccccd-2799-4433-96f6-56fdab44541a.jpg?pad_color=fff&v=1735799270&width=940",
+      "https://lewkin.com/cdn/shop/files/003_d01d0386-2f7c-4fc7-b969-360b6ff32060.jpg?pad_color=fff&v=1735894972&width=940",
+      "https://lewkin.com/cdn/shop/files/005_45343072-01bf-437e-951b-7ba796afa363.jpg?pad_color=fff&v=1735894972&width=940"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Sarah Baggy Wide-Fit Jeans",
+    "price": 60.99,
+    "category": "jeans",
+    "description": "Trendy baggy wide-fit jeans that provide a comfortable and relaxed fit, perfect for casual outings and day-to-day wear.",
+    "sizes": ["S", "M"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_9c66d0c9-9883-4474-b4cd-c49574d3e881.jpg?pad_color=fff&v=1735799107&width=940",
+      "https://lewkin.com/cdn/shop/files/004_84ee9772-f7f5-47b5-8db7-15b8e2235745.jpg?pad_color=fff&v=1735894803&width=940",
+      "https://lewkin.com/cdn/shop/files/006_1445f697-da54-483b-b523-fc8066c7ab68.jpg?pad_color=fff&v=1735894803&width=940"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Gabriella Slim-Fit Bootcut Jeans",
+    "price": 56.99,
+    "category": "jeans",
+    "description": "Slim-fit bootcut jeans that provide a sleek, modern silhouette with a slight flare at the bottom, versatile for any occasion.",
+    "sizes": ["S", "M", "L", "XL"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_3f89e907-ed15-4d8c-a69d-f3e52bc252d5.jpg?pad_color=fff&v=1735528002&width=940",
+      "https://lewkin.com/cdn/shop/files/006_258a8755-286f-407d-9795-2700352e09a1.jpg?pad_color=fff&v=1735528321&width=940",
+      "https://lewkin.com/cdn/shop/files/010_ba8f73f9-bc0b-43a3-b029-f05a9179266e.jpg?pad_color=fff&v=1735528321&width=940"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Wool Blend Low-Waist Shorts",
+    "price": 54.99,
+    "category": "shorts",
+    "description": "Stylish low-waist wool blend shorts, offering a chic and cozy option for cooler weather or transitional seasons.",
+    "sizes": ["S"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_dda75ed3-0e11-4e83-b17c-db3f53ac6b33.jpg?pad_color=fff&v=1735799238&width=940",
+      "https://lewkin.com/cdn/shop/files/003_16fa335c-3cef-44fb-84a2-fa593a6f8bb7.jpg?pad_color=fff&v=1735894941&width=940",
+      "https://lewkin.com/cdn/shop/files/005_50d0705c-e319-4683-9705-1da3b3edbf6c.jpg?pad_color=fff&v=1735894941&width=940"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Herringbone Print Shorts",
+    "price": 34.99,
+    "category": "shorts",
+    "description": "Casual yet fashionable shorts with a herringbone print, perfect for everyday wear during warmer weather.",
+    "sizes": ["S", "M", "L"],
+    "best_seller": true,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_c336240e-7a77-44ad-9a7b-20f58f23f9d5.jpg?pad_color=fff&v=1733981404&width=940",
+      "https://lewkin.com/cdn/shop/files/003_88068c40-a325-4fd4-92fb-5b2e06249cd4.jpg?pad_color=fff&v=1733982106&width=940",
+      "https://lewkin.com/cdn/shop/files/005_f1e7432c-1a92-457c-8b9f-194ca0fa1610.jpg?pad_color=fff&v=1733982106&width=940"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Solid Slim Fit Shorts",
+    "price": 37.99,
+    "category": "shorts",
+    "description": "Simple and sleek solid-colored slim-fit shorts that pair well with any casual or summer outfit.",
+    "sizes": ["S", "M"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/002_9a9a8a8d-2153-4e6a-8a69-b06c0d5a3311.jpg?pad_color=fff&v=1731554517&width=940",
+      "https://lewkin.com/cdn/shop/files/005_a3221a45-ccec-4896-b466-fa24ebd91713.jpg?pad_color=fff&v=1731554517&width=940",
+      "https://lewkin.com/cdn/shop/files/006_e9eb39f8-472b-4543-bb68-a46c33cfe73f.jpg?pad_color=fff&v=1731554517&width=940"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Leopard Ribbon Hairpin",
+    "price": 8.99,
+    "category": "accessories",
+    "description": "A fun and stylish leopard print ribbon hairpin, adding a playful touch to your hairstyle.",
+    "sizes": ["S"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_leopard_55c17141-0bcf-4ea4-99a9-02a8676268ff.jpg?pad_color=fff&v=1735613063&width=940",
+      "https://lewkin.com/cdn/shop/files/002_d6672ce1-1944-47f3-b410-41380c553adc.jpg?pad_color=fff&v=1735613063&width=940",
+      "https://lewkin.com/cdn/shop/files/003_9ac863a2-9aa3-42a2-a94a-adaf23679c69.jpg?pad_color=fff&v=1735613063&width=940"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Striped Headbands",
+    "price": 11.99,
+    "category": "accessories",
+    "description": "A collection of striped headbands, perfect for keeping your hair in place while adding a pop of style to your look.",
+    "sizes": ["S"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_Purple_1b4cf851-32a3-466a-bd2c-ce5ee942236c.jpg?pad_color=fff&v=1710463837&width=940",
+      "https://lewkin.com/cdn/shop/files/002_91f73246-e0c7-492e-8a20-1e770a60c2f6.jpg?pad_color=fff&v=1710463838&width=940"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Ribbon Hair Clip",
+    "price": 12.99,
+    "category": "accessories",
+    "description": "A cute ribbon hair clip that can easily add elegance and charm to any hairstyle.",
+    "sizes": ["S"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_147c60b1-e386-45a2-8f9b-301e709883aa.jpg?pad_color=fff&v=1708390775&width=940",
+      "https://lewkin.com/cdn/shop/files/003_5740a552-b2bf-40c9-8f84-5f1c1f5131a8.jpg?pad_color=fff&v=1708390775&width=940",
+      "https://lewkin.com/cdn/shop/files/002_Light_20gray_de21c6f8-b213-4a9b-a337-6fde576aeade.jpg?pad_color=fff&v=1708390774&width=940"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Solid Polyester Hair Elastic",
+    "price": 13.99,
+    "category": "accessories",
+    "description": "A set of solid polyester hair elastics, designed to securely hold your hair in place without damaging it.",
+    "sizes": ["S"],
+    "best_seller": false,
+    "images": [
+      "https://lewkin.com/cdn/shop/files/001_light_20beige_3fa6c732-90ed-439f-9870-64fea167ab5b.jpg?pad_color=fff&v=1730440017&width=940",
+      "https://lewkin.com/cdn/shop/files/002_0521dac8-6946-4301-8c19-ae2196967a70.jpg?pad_color=fff&v=1730440018&width=940",
+      "https://lewkin.com/cdn/shop/files/003_eb4b5c40-0acf-438a-98b7-e7540b23931d.jpg?pad_color=fff&v=1730440018&width=940"
+    ]
   }
 ]

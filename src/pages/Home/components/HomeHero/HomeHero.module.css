@@ -1,6 +1,6 @@
 .home-hero{
   position: relative;
-  height: 80vh;
+  height: 100vh;
   .background-img{
     z-index: -1;
     position: absolute;

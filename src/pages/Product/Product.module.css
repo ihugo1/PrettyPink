@@ -1,0 +1,13 @@
+.product{
+  margin-top: 10vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: var(--background-color);
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product{
+    flex-direction: column;
+  }
+}
