@@ -20,11 +20,13 @@ export const Product = () => {
         <>
           <ProductGallery images={products.images}/>
           <ProductInfo 
+            id={products.id}
             name={products.name} 
             price={products.price} 
             category={products.category} 
             description={products.description}
             sizes={products.sizes}
+            img={products.images[0]}
           />
         </>
       )}

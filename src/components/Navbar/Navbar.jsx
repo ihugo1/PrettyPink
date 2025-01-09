@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import { CartModal } from "../GlobalComponents";
 import { FaBars, FaCartShopping, FaXmark } from "react-icons/fa6";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleCart = () => setCartOpen(!cartOpen);
 
   return (
     <nav className={style["navbar"]}>
@@ -35,14 +38,17 @@ export const Navbar = () => {
             menuOpen ? style["navbar-links-active"] : ""
           }`}
         >
-          <a className={style["navbar-link"]}>
+          <a 
+            className={style["navbar-link"]}
+            onClick={toggleCart}  
+          >
             <FaCartShopping className={style["navbar-link-icon"]} />
           </a>
           <Link to="/products" className={style["navbar-link"]}>All products</Link>
           <a className={style["navbar-link"]}>About us</a>
-          <a className={style["navbar-link"]}>Login/Register</a>
         </ul>
       </div>
+      <CartModal toggleCart={cartOpen} setToggleCart={setCartOpen}/>
     </nav>
   );
 };

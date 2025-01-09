@@ -55,6 +55,9 @@
         .radio-input:checked + .radio-label{
           background-color: var(--primary-color);
         }
+        .radio-input:hover{
+          cursor: pointer;
+        }
       }
     }
     .action-buttons{
