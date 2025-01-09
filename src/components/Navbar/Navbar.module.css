@@ -45,6 +45,35 @@
           cursor: pointer;
         }
       }
+      .navbar-cart-button{
+        position: relative;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navbar-cart-button-icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: var(--font-size-xl);
+          color: var(--white-color);
+        }
+        .navbar-cart-total{
+          position: absolute;
+          top: 0;
+          left: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: red;
+          width: 20px;
+          height: 20px;
+          border-radius: 50px;
+          font-size: var(--font-size-md);
+          color: var(--white-color);
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Footer.module.css";
+import { FaFacebook, FaSquareTwitter, FaSquareInstagram  } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
@@ -25,21 +26,21 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Facebook
+              <FaFacebook/>
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              <FaSquareTwitter/>
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <FaSquareInstagram/>
             </a>
           </div>
         </div>
