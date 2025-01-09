@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import style from "./BestSellers.module.css";
 import { Link } from "react-router-dom";
-import { useProducts } from "../../../../hooks/useProducts";
-import { ProductCard } from "../../../../components/ProductCard/ProductCard";
+import { useProducts } from "../../hooks/useProducts";
+import { ProductCard } from "../ProductCard/ProductCard";
 
 export const BestSellers = () => {
   const { products, loading, fetchProducts } = useProducts();
@@ -18,7 +18,7 @@ export const BestSellers = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          products.map((product) => (
+          products.slice(0, 4).map((product) => (
             <ProductCard
               key={product.id}
               id={product.id}

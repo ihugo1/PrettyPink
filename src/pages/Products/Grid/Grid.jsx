@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Grid.module.css'
-import {ProductCard} from '../../../../components/ProductCard/ProductCard'
+import {ProductCard} from '../../../components/ProductCard/ProductCard'
 
 export const Grid = ({ products }) => {
   return (

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import style from "./CartModal.module.css";
-import { CartContext } from "../../context/ShoppingCartContext";
+import { CartContext } from "../../../context/ShoppingCartContext";
 import { FaTrashCan } from "react-icons/fa6";
 
 export const CartModal = ({ toggleCart, setToggleCart }) => {

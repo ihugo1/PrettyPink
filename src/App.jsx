@@ -1,7 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navbar, Footer } from "./components/GlobalComponents.js";
-import { Home, Product, Products, Login } from "./pages/pages.js";
+
+import { Navbar } from "./components/Navbar/Navbar.jsx";
+import { Footer } from "./components/Footer/Footer.jsx";
+
+import { Home } from "./pages/Home/Home.jsx";
+import { Product } from "./pages/Product/Product.jsx";
+import { Products } from "./pages/Products/Products.jsx";
+
 import { ShoppingCartProvider } from "./context/ShoppingCartContext.jsx";
 
 export const App = () => {

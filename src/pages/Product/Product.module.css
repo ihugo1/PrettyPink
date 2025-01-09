@@ -3,11 +3,17 @@
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   background-color: var(--background-color);
+  .product-section{
+    display: flex;
+  }
 }
 /* Responsive styles */
 @media (max-width: 768px) {
   .product{
-    flex-direction: column;
+    .product-section{
+      flex-direction: column;
+    }
   }
 }

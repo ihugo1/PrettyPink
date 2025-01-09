@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Products.module.css";
-import { Filter, Grid } from "./ProductsComponents.js";
+import { Filter } from "./Filter/Filter.jsx";
+import { Grid } from "./Grid/Grid.jsx";
 import { useProducts } from "../../hooks/useProducts.js";
 
 export const Products = () => {

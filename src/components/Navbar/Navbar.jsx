@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-import { CartModal } from "../GlobalComponents";
+import { CartModal } from "./CartModal/CartModal";
 import { FaBars, FaCartShopping, FaXmark } from "react-icons/fa6";
 
 export const Navbar = () => {
