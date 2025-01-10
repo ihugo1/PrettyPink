@@ -1,0 +1,99 @@
+.payment-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg);
+  .payment-form-left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xxs);
+    background-color: var(--color-white);
+    .section-title {
+      background-color: var(--white-color);
+      color: var(--black-color);
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--font-size-lg);
+    }
+    .input-section {
+      display: flex;
+      label {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        height: 40px;
+        font-size: var(--spacing-md);
+      }
+      input {
+        width: 80%;
+        height: 40px;
+        border-radius: 10px;
+        padding: var(--spacing-sm);
+        font-size: var(--font-lg);
+        border: none;
+        color: var(--primary-color);
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+    .summit-button {
+      width: 100%;
+      height: 50px;
+      background-color: var(--primary-color);
+      font-size: var(--font-lg);
+      color: var(--white-color);
+      transition: all 0.3s ease;
+    }
+    .summit-button:hover {
+      background-color: var(--black-color);
+    }
+  }
+  .payment-form-right {
+    width: 40%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .cart-total {
+      text-align: center;
+      font-size: var(--font-size-lg);
+      .label {
+        font-weight: 700;
+      }
+      .ammount {
+        font-weight: 400;
+        color: var(--primary-color);
+      }
+    }
+    .summit-button{
+      background-color: var(--primary-color);
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      color: var(--white-color);
+      font-size: var(--font-lg);
+      transition: all 0.3s ease;
+    }
+    .summit-button:hover{
+      background-color: var(--black-color);
+    }
+  }
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .payment-form{
+    flex-direction: column;
+    .payment-form-left, .payment-form-right{
+      width: 100%;
+    }
+  }
+}

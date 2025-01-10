@@ -33,6 +33,7 @@ export const ShoppingCartProvider = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
+    setTotalCart(0);
   }
 
   const contextValue = {

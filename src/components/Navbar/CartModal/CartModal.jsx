@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import style from "./CartModal.module.css";
 import { CartContext } from "../../../context/ShoppingCartContext";
 import { FaTrashCan } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export const CartModal = ({ toggleCart, setToggleCart }) => {
   const { cart, removeFromCart, clearCart, totalCart } =
@@ -37,9 +38,9 @@ export const CartModal = ({ toggleCart, setToggleCart }) => {
             <b>Total:</b>${totalCart}
           </div>
           <div className={style["cart-bottom-buttons"]}>
-            <button className={style["cart-bottom-button"]}>
+            <Link to="/payment" className={style["cart-bottom-button"]}>
               Start payment
-            </button>
+            </Link>
             <button
               className={style["cart-bottom-button"]}
               onClick={() => clearCart()}
