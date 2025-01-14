@@ -7,22 +7,20 @@ import { FaBars, FaCartShopping, FaXmark } from "react-icons/fa6";
 
 export const Navbar = () => {
   const { cart } = useContext(CartContext);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleCart = () => setCartOpen(!cartOpen);
+  const toggleMenu = () => setMenuIsOpen(!menuIsOpen);
 
-  useEffect(()=>{
-    if (menuOpen || cartOpen) {
-      document.body.style.overflow = "hidden"; 
-    } else {
-      document.body.style.overflow = ""; 
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen, cartOpen])
+  const toggleCart = () => {
+    setCartIsOpen(!cartIsOpen);
+    setMenuIsOpen(false);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = menuIsOpen || cartIsOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [menuIsOpen, cartIsOpen]);
 
   return (
     <nav className={style["navbar"]}>
@@ -33,35 +31,36 @@ export const Navbar = () => {
         </Link>
       </div>
       <div className={style["navbar-right"]}>
-        <button className={style["menu-button"]}>
-          {menuOpen ? (
-            <FaXmark
-              className={style["menu-button-icon"]}
-              onClick={toggleMenu}
-            />
+        <button className={style["menu-button"]} onClick={toggleMenu}>
+          {menuIsOpen ? (
+            <FaXmark className={style["menu-button-icon"]} />
           ) : (
-            <FaBars
-              className={style["menu-button-icon"]}
-              onClick={toggleMenu}
-            />
+            <FaBars className={style["menu-button-icon"]} />
           )}
         </button>
+
         <ul
           className={`${style["navbar-links"]} ${
-            menuOpen ? style["navbar-links-active"] : ""
+            menuIsOpen ? style["navbar-links-active"] : ""
           }`}
         >
           <button className={style["navbar-cart-button"]} onClick={toggleCart}>
             <FaCartShopping className={style["navbar-cart-button-icon"]} />
-            {
-              cart.length>0 ? <p className={style['navbar-cart-total']}>{cart.length}</p> : null
-            }
+            {cart.length > 0 ? (
+              <p className={style["navbar-cart-total"]}>{cart.length}</p>
+            ) : null}
           </button>
-          <Link to="/products" className={style["navbar-link"]}>All products</Link>
+          <Link
+            to="/products"
+            className={style["navbar-link"]}
+            onClick={toggleMenu}
+          >
+            All products
+          </Link>
           <a className={style["navbar-link"]}>About us</a>
         </ul>
       </div>
-      <CartModal toggleCart={cartOpen} setToggleCart={setCartOpen}/>
+      <CartModal cartIsOpen={cartIsOpen} toggleCart={toggleCart} />
     </nav>
   );
 };

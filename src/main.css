@@ -48,4 +48,6 @@ button{
   --white-color: #fff;
   --black-color: #110f10;
   --gray-color: #747474;
+
+  --animation: all 0.3s ease;
 }
