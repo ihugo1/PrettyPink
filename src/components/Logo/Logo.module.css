@@ -1,0 +1,20 @@
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.pretty{
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.pink{
+  color: var(--text-light-color);
+  font-weight: 400;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
