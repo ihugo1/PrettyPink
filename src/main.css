@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* ========================================================================
    CSS Reset
    ======================================================================== */
@@ -20,6 +20,7 @@ body {
   line-height: 1;
   font-family: "Raleway", sans-serif;
   font-size: var(--font-size-base); 
+  text-transform: uppercase;
 }
 
 img, picture, video, canvas, svg {

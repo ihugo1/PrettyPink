@@ -12,7 +12,7 @@ export const Hero = () => {
         muted
       ></video>
       <div className={styles.content}>
-        <h3 className={styles.title}>More than clothes, it's an attitude.</h3>
+        <h3 className={styles.title}>More than clothes, it's an attitude</h3>
         <h4 className={styles.subtitle}>
           Refresh your wardrobe with versatile pieces that fit your lifestyle
         </h4>

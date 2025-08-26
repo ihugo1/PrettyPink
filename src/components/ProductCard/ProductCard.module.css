@@ -1,0 +1,27 @@
+.productCard{
+  display: flex;
+  flex-direction: column;  
+}
+
+.productImage{
+
+}
+
+.productInfo{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs);
+}
+
+.productName{
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.productPrice{
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--primary-color);
+}
