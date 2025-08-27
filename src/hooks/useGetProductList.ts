@@ -16,7 +16,7 @@ export const useGetProductList = ({ itemsPerPage = 5, sortedBy = "name.asc", }: 
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
-    queryKey: ["products"],
+    queryKey: ["products", { sortedBy, itemsPerPage }],
     initialPageParam: 1,
     queryFn: async ({ pageParam = 1 }) => {
       const data = await getProducts({

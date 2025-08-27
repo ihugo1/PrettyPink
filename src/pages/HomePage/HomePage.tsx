@@ -3,22 +3,58 @@ import { Hero } from "./Hero/Hero";
 import { ProductGrid } from "../../components/ProductGrid/ProductGrid";
 import { AsyncDataHandler } from "../../components/AsyncDataHandler/AsyncDataHandler";
 import { useGetProductList } from "../../hooks/useGetProductList";
-import { IoIosStar } from "react-icons/io";
+import { NewsletterSignup } from "./NewsletterSignup/NewsletterSignup";
+import { SocialLinks } from "./SocialLinks/SocialLinks";
+import { IoIosStar, IoIosTime } from "react-icons/io";
 
 export const HomePage = () => {
-  const { products, isLoading, error } = useGetProductList({
+  const {
+    products: bestSellers,
+    isLoading: isBestSellersLoading,
+    error: bestSellersError,
+  } = useGetProductList({
     itemsPerPage: 3,
     sortedBy: "sales_count.desc",
+  });
+
+  const {
+    products: newest,
+    isLoading: isNewestLoading,
+    error: newestError,
+  } = useGetProductList({
+    itemsPerPage: 3,
+    sortedBy: "created_at.asc",
   });
 
   return (
     <div className={styles.homePage}>
       <Hero />
-      <section className={styles.bestSellers}>
-        <AsyncDataHandler isLoading={isLoading} error={error?.message}>
-          <ProductGrid products={products || []} title="Best Sellers" icon={<IoIosStar />}/>
+      <section className={styles.newestArrivals}>
+        <AsyncDataHandler
+          isLoading={isNewestLoading}
+          error={newestError?.message}
+        >
+          <ProductGrid
+            products={newest || []}
+            title="Newest Arrivals"
+            icon={<IoIosTime />}
+          />
         </AsyncDataHandler>
       </section>
+      <NewsletterSignup />
+      <section className={styles.bestSellers}>
+        <AsyncDataHandler
+          isLoading={isBestSellersLoading}
+          error={bestSellersError?.message}
+        >
+          <ProductGrid
+            products={bestSellers || []}
+            title="Best Sellers"
+            icon={<IoIosStar />}
+          />
+        </AsyncDataHandler>
+      </section>
+      <SocialLinks/>
     </div>
   );
 };

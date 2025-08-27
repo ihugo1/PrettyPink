@@ -1,10 +1,11 @@
 .productCard{
   display: flex;
   flex-direction: column;  
+  transition: all 0.5s ease-in-out ;
 }
 
 .productImage{
-
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px;
 }
 
 .productInfo{
@@ -24,4 +25,13 @@
   font-size: var(--font-size-md);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--primary-color);
+}
+
+.productCard:hover{
+  cursor: pointer;
+  background-color: var(--background-color);
+}
+
+.productCard:hover .productName{
+  color: var(--text-light-color);
 }

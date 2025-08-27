@@ -1,0 +1,82 @@
+.newsLetterSignup{
+  position: relative;
+  display: flex;
+  height: 70vh
+}
+
+.background{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: rgba(49, 49, 49, 0.8);
+  text-align: center;
+}
+
+.content h2{
+  color: var(--text-light-color);
+  font-size: var(--font-size-xxl);
+  font-weight: 800;
+}
+
+.content h3{
+  color: var(--text-light-color);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.content form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 50%;
+}
+
+.content form input{
+  width: 100%;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.content form input:focus{
+  outline: none;
+}
+
+.content form button{
+  width: 25%;
+  border: none;
+  background-color: var(--primary-color);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  color: var(--text-light-color);
+}
+
+/*-------------------------------------------------------
+Responsive
+---------------------------------------------------------*/
+@media (max-width: 992px) {
+  .newsLetterSignup{
+    height: 90vh;
+  }
+  .content form{
+    width: 80%;
+  }
+  .content form button{
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {}
