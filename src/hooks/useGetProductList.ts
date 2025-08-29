@@ -5,9 +5,14 @@ import type { ProductSortOptions } from "../api/productsService";
 interface useGetProductsParams {
   itemsPerPage?: number;
   sortedBy?: ProductSortOptions;
+  categoryId?: string;
 }
 
-export const useGetProductList = ({ itemsPerPage = 5, sortedBy = "name.asc", }: useGetProductsParams = {}) => {
+export const useGetProductList = ({
+  itemsPerPage = 10,
+  sortedBy = "sales_count.asc",
+  categoryId,
+}: useGetProductsParams = {}) => {
   const {
     data,
     isLoading,
@@ -16,13 +21,14 @@ export const useGetProductList = ({ itemsPerPage = 5, sortedBy = "name.asc", }: 
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
-    queryKey: ["products", { sortedBy, itemsPerPage }],
+    queryKey: ["products", { sortedBy, itemsPerPage, categoryId }],
     initialPageParam: 1,
     queryFn: async ({ pageParam = 1 }) => {
       const data = await getProducts({
         page: pageParam,
         limit: itemsPerPage,
         sortedBy: sortedBy,
+        categoryId: categoryId,
       });
       return data;
     },
@@ -35,7 +41,7 @@ export const useGetProductList = ({ itemsPerPage = 5, sortedBy = "name.asc", }: 
   const products = data?.pages.flatMap((page) => page.data) || [];
 
   return {
-    products, 
+    products,
     isLoading,
     error,
     fetchNextPage,

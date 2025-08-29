@@ -1,10 +1,11 @@
 import styles from "./Logo.module.css";
+import { Link } from "react-router-dom";
 
 export const Logo = () => {
   return (
-    <h1 className={styles.logo}>
+    <Link className={styles.logo} to={"/"}>
       <section className={styles.pretty}>PRETTY</section>
       <section className={styles.pink}>P!NK</section>
-    </h1>
+    </Link>
   )
 }

@@ -21,6 +21,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: var(--font-size-base); 
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 img, picture, video, canvas, svg {
@@ -78,6 +79,9 @@ button{
   /* Colors */
   --background-color: #1d1d1d;
   --background-color-hover: #252525;
+
+  --background-color-light: #e6e6e6;
+  --background-color-light-border: #cfcfcf;
 
   --primary-color: #cc4c7d;
   --primary-color-hover: #da6793;

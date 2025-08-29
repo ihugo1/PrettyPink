@@ -23,10 +23,12 @@ export const ProductGrid = ({
 
   return (
     <div className={styles.productGrid}>
-      <h3 className={styles.title}>
-        {icon}
-        {title}
-      </h3>
+      {title && (
+        <h3 className={styles.title}>
+          {icon}
+          {title}
+        </h3>
+      )}
       <div className={styles.grid}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

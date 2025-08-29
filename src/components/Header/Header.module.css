@@ -9,6 +9,11 @@
   align-items: center;
   gap: var(--spacing-lg);
   padding: 0 var(--spacing-xxl);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.scrolled{
+  background-color: var(--background-color);
 }
 
 .logoContainer {

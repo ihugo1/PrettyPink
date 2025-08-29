@@ -1,0 +1,19 @@
+.productSorter{
+  width: 180px;
+  height: 40px;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--background-color-light-border);
+  background-color: var(--background-color-light);
+  color: var(--text-dark-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.productSorter select{
+  display: none;
+}
+
+.productSorter:focus{
+  outline: none;
+
+}

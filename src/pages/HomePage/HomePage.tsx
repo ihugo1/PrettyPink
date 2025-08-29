@@ -41,7 +41,7 @@ export const HomePage = () => {
           />
         </AsyncDataHandler>
       </section>
-      <NewsletterSignup />
+      <SocialLinks />
       <section className={styles.bestSellers}>
         <AsyncDataHandler
           isLoading={isBestSellersLoading}
@@ -54,7 +54,7 @@ export const HomePage = () => {
           />
         </AsyncDataHandler>
       </section>
-      <SocialLinks/>
+      <NewsletterSignup />
     </div>
   );
 };

@@ -1,22 +1,19 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// src/main.tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { App } from "./App.tsx";
 import "./main.css";
-import { App } from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; // <-- Asegúrate de tener estas importaciones
 
-// Importaciones de React Query
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"; // Importar las Devtools
+const queryClient = new QueryClient(); // <-- Define tu QueryClient aquí
 
-// Crear una instancia de QueryClient
-const queryClient = new QueryClient();
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    {/* Envolver la aplicación con QueryClientProvider */}
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
-      {/* Añadir las Devtools (opcional, solo para desarrollo) */}
-      <ReactQueryDevtools initialIsOpen={false} />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </QueryClientProvider>
-  </StrictMode>
+  </React.StrictMode>
 );

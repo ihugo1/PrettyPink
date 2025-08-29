@@ -27,5 +27,5 @@ export const AsyncDataHandler = ({
     );
   }
 
-  return <div>{children}</div>;
+  return <div className={styles.container}>{children}</div>;
 };
