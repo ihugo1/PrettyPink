@@ -3,7 +3,7 @@ import { getProductById } from "../api/productsService";
 
 export const useGetProductById = (id: string | undefined) => {
   const { data, isLoading, error } = useQuery({
-    queryKey: ["product"],
+    queryKey: ["product", id],
     queryFn: async () => {
       const data = await getProductById(id!);
       return data;

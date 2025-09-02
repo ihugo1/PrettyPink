@@ -3,7 +3,7 @@ export type Product = {
   name: string;
   price: number;
   main_image_url: string;
-  category_id?: ProductCategory;
+  category: ProductCategory;
   description?: string;
   created_at: Date;
   sales_count: number;

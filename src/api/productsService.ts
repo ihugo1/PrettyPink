@@ -59,14 +59,16 @@ export const getProducts = async ({
       Prefer: "count=exact",
     },
   });
-
+  console.log(url);
   return response;
 };
 
 export const getProductById = async (id: string) => {
   const response = await apiFetch<Product[]>(
-    `products?id=eq.${id}&select=*,product_images(*)`
+    `products?id=eq.${id}&select=*,product_images(*),category:category_id(*)`
   );
+  /*
   console.log(`products?id=eq.${id}&select=*,product_images(*)`);
+  */
   return response.data[0];
 };

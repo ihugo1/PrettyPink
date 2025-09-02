@@ -1,0 +1,67 @@
+.footer {
+  background-color: var(--background-color);
+  color: var(--text-light-color);
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  font-size: var(--font-size-sm);
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--background-color-hover);
+}
+
+.logoSection, .navSection, .socialSection {
+  flex: 1;
+  min-width: 200px; /* Prevents sections from becoming too narrow */
+}
+
+.tagline {
+  margin-top: var(--spacing-md);
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+.navSection h4, .socialSection h4 {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-md);
+  color: white;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.navLink {
+  transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.socialIcons {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.socialLink {
+  transition: color 0.2s ease-in-out;
+}
+
+.socialLink:hover {
+  color: var(--primary-color);
+}
+
+.copyrightSection {
+  padding-top: var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: #888; /* A slightly dimmer color for copyright */
+}
