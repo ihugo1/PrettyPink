@@ -13,7 +13,8 @@ export const AsyncDataHandler = ({
 }: AsyncDataHandlerProps) => {
   if (isLoading) {
     return (
-      <div>
+      <div className={styles.loader}>
+        <div className={styles.spinner}></div>
         <p>Loading...</p>
       </div>
     );
@@ -21,7 +22,7 @@ export const AsyncDataHandler = ({
 
   if (error) {
     return (
-      <div>
+      <div className={styles.error}>
         <p>Error: {error}</p>
       </div>
     );
