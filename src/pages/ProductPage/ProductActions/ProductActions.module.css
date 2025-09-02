@@ -1,0 +1,57 @@
+.productActions{
+  margin-top: var(--spacing-xl);
+}
+
+.sizeSelector{
+
+}
+
+.selectorLabel{
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.radioGroup{
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.radioOption{
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.radioInput{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.radioLabel{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  background-color: var(--background-color-light-border);
+  transition: all 0.2s ease-in-out;
+}
+
+.radioInput:checked + .radioLabel{
+  background-color: rgb(46, 154, 46);
+  color: white;
+  border-color: black;
+  border-radius: var(--border-radius);
+  height: 55px;
+  width:  55px;
+}

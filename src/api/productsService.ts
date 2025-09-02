@@ -15,7 +15,7 @@ export const productSortOptionsArray = [
 export type ProductSortOptions = (typeof productSortOptionsArray)[number];
 
 interface ProductSortDisplayOption {
-  value: ProductSortOptions; 
+  value: ProductSortOptions;
   label: string;
 }
 
@@ -50,7 +50,7 @@ export const getProducts = async ({
     url += `&category_id=eq.${categoryId}`;
   }
   url += `&order=${sortedBy}`;
-  
+
   console.log(url);
 
   const response = await apiFetch<Product[]>(url, {
@@ -61,4 +61,12 @@ export const getProducts = async ({
   });
 
   return response;
+};
+
+export const getProductById = async (id: string) => {
+  const response = await apiFetch<Product[]>(
+    `products?id=eq.${id}&select=*,product_images(*)`
+  );
+  console.log(`products?id=eq.${id}&select=*,product_images(*)`);
+  return response.data[0];
 };

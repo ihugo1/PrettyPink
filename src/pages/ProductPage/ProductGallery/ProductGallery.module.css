@@ -1,0 +1,38 @@
+.productGallery {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.mainImageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.mainImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagesContainer {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: var(--spacing-sm);
+}
+
+.imagesContainer img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid transparent;
+}
+
+.imagesContainer img.selectedImage {
+  border: 1px solid black;
+}
+
+.mainImageContainer img:hover,
+.imagesContainer img:hover {
+  cursor: pointer;
+}
