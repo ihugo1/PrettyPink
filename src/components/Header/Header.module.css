@@ -94,6 +94,70 @@
   font-weight: 500;
 }
 
+.loginModal{
+  position: absolute;
+  top: 5px;
+  width: 25vw;
+  height: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-light);
+  gap: var(--spacing-sm);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  right: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.userInfoContainer{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.modalButtons{
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+
+.modalButtons button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100px;
+  height: 40px;
+  color: var(--text-light-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.modalButtons button:hover{
+  cursor: pointer;
+}
+
+.loginModalOpen{
+  right: 5px;
+}
+
+.avatarImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
 /*-------------------------------------------------------
 # Responsive
 ---------------------------------------------------------*/

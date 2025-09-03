@@ -45,30 +45,26 @@ export const getProducts = async ({
   const rangeStart = (page - 1) * limit;
   const rangeEnd = page * limit - 1;
 
-  let url = `/products?select=*`;
-  if (categoryId) {
-    url += `&category_id=eq.${categoryId}`;
-  }
-  url += `&order=${sortedBy}`;
+  let endpoint = `/rest/v1/products?select=*`;
+  if (categoryId) endpoint += `&category_id=eq.${categoryId}`;
+  endpoint += `&order=${sortedBy}`;
 
-  console.log(url);
-
-  const response = await apiFetch<Product[]>(url, {
+  const options = {
     headers: {
       Range: `${rangeStart}-${rangeEnd}`,
       Prefer: "count=exact",
     },
-  });
-  console.log(url);
+  };
+
+  const response = await apiFetch<Product[]>(endpoint, options);
   return response;
 };
 
-export const getProductById = async (id: string) => {
+export const getProductById = async (
+  id: string
+): Promise<APIResponse<Product[]>> => {
   const response = await apiFetch<Product[]>(
-    `products?id=eq.${id}&select=*,product_images(*),category:category_id(*)`
+    `/rest/v1/products?id=eq.${id}&select=*,product_images(*),category:category_id(*)`
   );
-  /*
-  console.log(`products?id=eq.${id}&select=*,product_images(*)`);
-  */
-  return response.data[0];
+  return response;
 };

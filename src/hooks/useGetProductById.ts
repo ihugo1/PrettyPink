@@ -5,8 +5,8 @@ export const useGetProductById = (id: string | undefined) => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["product", id],
     queryFn: async () => {
-      const data = await getProductById(id!);
-      return data;
+      const response = await getProductById(id!);
+      return response.data[0];
     },
     enabled: !!id,
   });

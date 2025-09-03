@@ -6,19 +6,25 @@ export interface APIResponse<T> {
   count: number | null;
 }
 
-export const apiFetch = async <T>(endpoint: string, options: RequestInit = {}): Promise<APIResponse<T>> => {
+export const apiFetch = async <T>(
+  endpoint: string,
+  options: RequestInit = {}
+): Promise<APIResponse<T>> => {
   if (!supabaseUrl || !supabaseKey) {
     throw new Error("Supabase URL or Key are missing from .env.local");
   }
 
-  const response = await fetch(supabaseUrl + endpoint, {
-    headers: {
-      apikey: supabaseKey,
-      Authorization: `Bearer ${supabaseKey}`,
-      "Content-Type": "application/json",
-      ...options.headers,
-    },
-  });
+  const { headers, ...restOfOptions } = options;
+  const finalOptions = {
+    ...restOfOptions,
+     headers: {
+       apikey: supabaseKey,
+       "Content-Type": "application/json",
+      ...headers
+     }
+  }
+  const finalURL = supabaseUrl + endpoint;
+  const response = await fetch(finalURL, finalOptions);
 
   if (!response.ok) {
     const errorData = await response.json();
@@ -29,7 +35,6 @@ export const apiFetch = async <T>(endpoint: string, options: RequestInit = {}): 
 
   const contentRange = response.headers.get("Content-Range");
   const count = contentRange ? parseInt(contentRange.split("/")[1]) : null;
-
   const data = await response.json();
 
   return { data, count };

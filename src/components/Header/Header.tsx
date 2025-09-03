@@ -1,11 +1,17 @@
 import styles from "./Header.module.css";
 import { Logo } from "../Logo/Logo";
 import { FaCartShopping, FaUser, FaBars, FaX } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { FaSignOutAlt } from "react-icons/fa";
+import { RiLogoutBoxLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export const Header = () => {
+  const { session, signInWithGoogle, signOut } = useAuth();
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -31,13 +37,22 @@ export const Header = () => {
   ];
 
   const handleMenuOpen = () => setMenuOpen(!menuOpen);
+  const handleLoginModalOpen = () => setLoginModalOpen(!loginModalOpen);
 
   return (
-    <header className={`${styles.header} ${isScrolled || location.pathname.startsWith("/product/") ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${
+        isScrolled || location.pathname.startsWith("/product/")
+          ? styles.scrolled
+          : ""
+      }`}
+    >
+      {/* LOGO */}
       <div className={styles.logoContainer}>
         <Logo />
       </div>
 
+      {/* NAV LINKS */}
       <ul className={styles.navLinks}>
         {navLinks.map((link) => (
           <Link key={link.link} className={styles.navLink} to={link.route}>
@@ -46,6 +61,7 @@ export const Header = () => {
         ))}
       </ul>
 
+      {/* MOBILE MENU */}
       <div
         className={`${styles.mobileMenu} ${
           menuOpen ? styles.mobileMenuActive : ""
@@ -58,16 +74,69 @@ export const Header = () => {
         ))}
       </div>
 
+      {/* ACTIONS */}
       <div className={styles.actions}>
         <button className={styles.cartButton}>
           <FaCartShopping />
         </button>
-        <button className={styles.loginButton}>
-          <FaUser />
+        <button className={styles.loginButton} onClick={handleLoginModalOpen}>
+          {session?.user ? (
+            session.user.user_metadata?.avatar_url ||
+            session.user.user_metadata?.picture ? (
+              <img
+                src={
+                  session.user.user_metadata.avatar_url ||
+                  session.user.user_metadata.picture
+                }
+                className={styles.avatarImage}
+              />
+            ) : session.user.user_metadata?.name ? (
+              <div className={styles.avatarInitial}>
+                {session.user.user_metadata.name[0].toUpperCase()}
+              </div>
+            ) : (
+              <FaUser />
+            )
+          ) : (
+            <FaUser />
+          )}
         </button>
         <button className={styles.menuButton} onClick={handleMenuOpen}>
           {menuOpen ? <FaX /> : <FaBars />}
         </button>
+      </div>
+
+      {/* LOGIN MODAL */}
+      <div
+        className={`${styles.loginModal} ${
+          loginModalOpen ? `${styles.loginModalOpen}` : ""
+        }`}
+      >
+        <div className={styles.userInfoContainer}>
+          {session && session.user ? (
+            <>
+              <p>Logged as:</p>
+              <p>{session.user.user_metadata?.name}</p>
+            </>
+          ) : (
+            <p></p>
+          )}
+        </div>
+        <div className={styles.modalButtons}>
+          <button
+            onClick={session && session.user ? signOut : signInWithGoogle}
+          >
+            {session && session.user ? (
+              <>Logout</>
+            ) : (
+              <>
+                <FcGoogle />
+                Sign in
+              </>
+            )}
+          </button>
+          <button onClick={handleLoginModalOpen}>Close</button>
+        </div>
       </div>
     </header>
   );
