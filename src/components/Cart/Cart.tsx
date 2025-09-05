@@ -1,7 +1,8 @@
 import styles from "./Cart.module.css";
-import { useGetCart } from "../../hooks/useGetCart";
-import { useRemoveCartItem } from "../../hooks/useRemoveCartItem";
+import { useGetCart } from "../../hooks/cart/useGetCart";
+import { useRemoveCartItem } from "../../hooks/cart/useRemoveCartItem";
 import { FaCartShopping, FaX, FaTrash } from "react-icons/fa6";
+import { useLockScroll } from "../../hooks/utils/useLockScroll";
 
 interface Props {
   isOpen: boolean;
@@ -12,13 +13,16 @@ export const Cart = ({ isOpen, hanldeCloseCart }: Props) => {
   const { data } = useGetCart();
   const { removeCartItem, isPending } = useRemoveCartItem();
 
+  useLockScroll(isOpen);
   const handleRemoveCartItem = (cartItemId: string) => {
     removeCartItem({ cartItemId });
   };
 
   return (
     <div className={styles.cart}>
-      <div className={`${styles.overlay} ${isOpen ? styles.activeOverlay : ""}`}></div>
+      <div
+        className={`${styles.overlay} ${isOpen ? styles.activeOverlay : ""}`}
+      ></div>
       <div
         className={`${styles.cartContainer} ${isOpen ? styles.activeCart : ""}`}
       >

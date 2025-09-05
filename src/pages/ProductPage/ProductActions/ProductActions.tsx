@@ -1,7 +1,7 @@
 import styles from "./ProductActions.module.css";
 import { useState } from "react";
 import type { Product } from "../../../types";
-import { useAddCartItem } from "../../../hooks/useAddCartItem";
+import { useAddCartItem } from "../../../hooks/cart/useAddCartItem";
 
 interface Props {
   product: Product;

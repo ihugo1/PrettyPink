@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCart, getCartTotal } from "../api/cartService";
-import { useAuth } from "../context/AuthContext";
+import { getCart, getCartTotal } from "../../api/cartService";
+import { useAuth } from "../../context/AuthContext";
 
 export const useGetCart = () => {
   const { session } = useAuth();

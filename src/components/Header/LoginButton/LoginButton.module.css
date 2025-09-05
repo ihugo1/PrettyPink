@@ -41,7 +41,7 @@
 
 .loginModal {
   position: absolute;
-  top: calc(100% + 10px); /* Position it below the button */
+  top: calc(100% + 10px);
   right: 0;
   width: 280px;
   display: flex;
@@ -103,9 +103,9 @@
   background-color: var(--primary-color-dark);
 }
 
-/* Style for the 'Close' button */
 .modalButtons button:last-child {
-  background-color: var(--grey-color);
+  background-color: var(--background-color-light-border);
+  color: var(--text-dark-color);
 }
 
 .modalButtons button:last-child:hover {

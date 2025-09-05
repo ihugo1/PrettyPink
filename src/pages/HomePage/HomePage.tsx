@@ -2,7 +2,7 @@ import styles from "./HomePage.module.css";
 import { Hero } from "./Hero/Hero";
 import { ProductGrid } from "../../components/ProductGrid/ProductGrid";
 import { AsyncDataHandler } from "../../components/AsyncDataHandler/AsyncDataHandler";
-import { useGetProductList } from "../../hooks/useGetProductList";
+import { useGetProductList } from "../../hooks/products/useGetProductList";
 import { NewsletterSignup } from "./NewsletterSignup/NewsletterSignup";
 import { SocialLinks } from "./SocialLinks/SocialLinks";
 import { IoIosStar, IoIosTime } from "react-icons/io";

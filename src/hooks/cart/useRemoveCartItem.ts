@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { removeItemFromCart } from "../api/cartService";
-import { useAuth } from "../context/AuthContext";
+import { removeItemFromCart } from "../../api/cartService";
+import { useAuth } from "../../context/AuthContext";
 
 export const useRemoveCartItem = () => {
   const queryClient = useQueryClient();

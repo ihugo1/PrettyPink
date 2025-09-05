@@ -1,5 +1,5 @@
 import { FaCartShopping } from "react-icons/fa6";
-import { useGetCart } from "../../../hooks/useGetCart";
+import { useGetCart } from "../../../hooks/cart/useGetCart";
 import styles from "./CartButton.module.css";
 
 interface Props {

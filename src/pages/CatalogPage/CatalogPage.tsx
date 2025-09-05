@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CategorySelector } from "./CategorySelector/CategorySelector";
 import { ProductGrid } from "../../components/ProductGrid/ProductGrid";
 import { ProductSorter } from "./ProductSorter/ProductSorter";
-import { useGetProductList } from "../../hooks/useGetProductList";
+import { useGetProductList } from "../../hooks/products/useGetProductList";
 import { AsyncDataHandler } from "../../components/AsyncDataHandler/AsyncDataHandler";
 import type { ProductSortOptions } from "../../api/productsService";
 import { useSearchParams } from "react-router-dom";

@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { getProducts } from "../api/productsService";
-import type { ProductSortOptions } from "../api/productsService";
+import { getProducts } from "../../api/productsService";
+import type { ProductSortOptions } from "../../api/productsService";
 
 interface useGetProductsParams {
   itemsPerPage?: number;

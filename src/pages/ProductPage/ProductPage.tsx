@@ -1,11 +1,11 @@
 import styles from "./ProductPage.module.css";
 import { useParams } from "react-router-dom";
-import { useGetProductById } from "../../hooks/useGetProductById";
+import { useGetProductById } from "../../hooks/products/useGetProductById";
 import { AsyncDataHandler } from "../../components/AsyncDataHandler/AsyncDataHandler";
 import { ProductGallery } from "./ProductGallery/ProductGallery";
 import { ProductInfo } from "./ProductInfo/ProductInfo";
 import { ProductActions } from "./ProductActions/ProductActions";
-import { useGetProductList } from "../../hooks/useGetProductList";
+import { useGetProductList } from "../../hooks/products/useGetProductList";
 import { ProductGrid } from "../../components/ProductGrid/ProductGrid";
 
 export const ProductPage = () => {

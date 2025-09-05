@@ -1,5 +1,5 @@
 import styles from "./CategorySelector.module.css";
-import { useGetProductCategories } from "../../../hooks/useGetProductCategories";
+import { useGetProductCategories } from "../../../hooks/products/useGetProductCategories";
 import { AsyncDataHandler } from "../../../components/AsyncDataHandler/AsyncDataHandler";
 
 interface Props {
