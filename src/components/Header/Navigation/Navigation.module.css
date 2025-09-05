@@ -1,0 +1,14 @@
+.navLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navLink {
+  color: var(--text-light-color);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}

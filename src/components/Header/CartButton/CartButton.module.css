@@ -1,0 +1,33 @@
+.cartButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 50px;
+  padding: var(--spacing-sm);
+  color: var(--text-light-color);
+  transition: color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.cartButton:hover {
+  color: var(--primary-color);
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

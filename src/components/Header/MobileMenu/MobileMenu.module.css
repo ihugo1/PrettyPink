@@ -1,0 +1,40 @@
+.mobileMenu {
+  top: 10vh; /* Or whatever the header height is */
+  left: 0; /* Use left instead of right for consistency */
+  width: 100%;
+  height: calc(100vh - 10vh);
+  position: fixed; /* Use fixed to cover the whole screen */
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center links vertically */
+  align-items: center;
+  list-style: none;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 5; /* Below the main header content */
+}
+
+.mobileMenuActive {
+  transform: translateX(0);
+}
+
+.mobileNav {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.menuLink {
+  color: var(--text-light-color);
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  padding: var(--spacing-md);
+  transition: color 0.2s;
+}
+
+.menuLink:hover {
+  color: var(--primary-color);
+}
