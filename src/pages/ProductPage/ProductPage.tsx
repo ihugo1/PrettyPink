@@ -39,7 +39,7 @@ export const ProductPage = () => {
                   price={product.price}
                   description={product.description}
                 />
-                <ProductActions sizes={product.sizes} />
+                <ProductActions product={product} />
               </div>
             </div>
           )}

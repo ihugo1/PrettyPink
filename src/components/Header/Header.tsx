@@ -2,19 +2,25 @@ import styles from "./Header.module.css";
 import { Logo } from "../Logo/Logo";
 import { FaCartShopping, FaUser, FaBars, FaX } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-import { FaSignOutAlt } from "react-icons/fa";
-import { RiLogoutBoxLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { Cart } from "../Cart/Cart";
+
+const navLinks = [
+  { link: "Home", label: "Home", route: "/" },
+  { link: "About", label: "Catalog", route: "/catalog" },
+  { link: "Contact", label: "About", route: "/about" },
+];
 
 export const Header = () => {
+  const location = useLocation();
   const { session, signInWithGoogle, signOut } = useAuth();
   const [loginModalOpen, setLoginModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,14 +36,9 @@ export const Header = () => {
     };
   }, []);
 
-  const navLinks = [
-    { link: "Home", label: "Home", route: "/" },
-    { link: "About", label: "Catalog", route: "/catalog" },
-    { link: "Contact", label: "About", route: "/about" },
-  ];
-
   const handleMenuOpen = () => setMenuOpen(!menuOpen);
   const handleLoginModalOpen = () => setLoginModalOpen(!loginModalOpen);
+  const handleCartOpen = () => setCartOpen(!cartOpen);
 
   return (
     <header
@@ -76,7 +77,7 @@ export const Header = () => {
 
       {/* ACTIONS */}
       <div className={styles.actions}>
-        <button className={styles.cartButton}>
+        <button className={styles.cartButton} onClick={handleCartOpen}>
           <FaCartShopping />
         </button>
         <button className={styles.loginButton} onClick={handleLoginModalOpen}>
@@ -138,6 +139,9 @@ export const Header = () => {
           <button onClick={handleLoginModalOpen}>Close</button>
         </div>
       </div>
+
+      {/* CART */}
+      <Cart isOpen={cartOpen} hanldeCloseCart={() => setCartOpen(false)} />
     </header>
   );
 };

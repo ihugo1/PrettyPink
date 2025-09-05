@@ -23,3 +23,17 @@ export type ProductCategory ={
   name: string;
   description?: string;
 }
+
+export type Cart = {
+  id: string;
+  user_id: string;
+  date: Date;
+  cart_items: CartItem[];
+}
+
+export type CartItem = {
+  id: string;
+  cart_id: string;
+  size: "S" | "M" | "L" | "XL" | "XXL";
+  product?: Product;
+}

@@ -74,7 +74,7 @@ button{
   --spacing-xxl: 4rem;     /* 64px */
 
   /* Border Radius */
-  --border-radius: 2rem;
+  --border-radius: 0.5rem;
 
   /* Colors */
   --background-color: #1d1d1d;
