@@ -3,6 +3,9 @@ import { App } from "./App.tsx";
 import "./main.css";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +18,12 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <BrowserRouter basename="/PrettyPink">
+        <AuthProvider>
+          <ScrollToTop />
+          <App />
+        </AuthProvider>
+      </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>
 );
