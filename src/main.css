@@ -84,7 +84,10 @@ button{
   --background-color-light-border: #e2e2e2;
 
   --primary-color: #cc4c7d;
-  --primary-color-hover: #da6793;
+  --primary-color-hover: rgb(149, 52, 89);
 
-  --text-light-color: #d6d6d6;
+  --secondary-color: #e2e2e2;
+  --secondary-color-hover: #d2d2d2;
+
+  --text-light-color: #e6e6e6;
 }

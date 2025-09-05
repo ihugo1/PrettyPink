@@ -2,12 +2,16 @@ import styles from "./ProductActions.module.css";
 import { useState } from "react";
 import type { Product } from "../../../types";
 import { useAddCartItem } from "../../../hooks/cart/useAddCartItem";
+import { Button } from "../../../components/Button/Button";
+import { FaCartShopping } from "react-icons/fa6";
+import { useAuth } from "../../../context/AuthContext";
 
 interface Props {
   product: Product;
 }
 
 export const ProductActions = ({ product }: Props) => {
+  const { session } = useAuth();
   const { addCartItem, isPending } = useAddCartItem();
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -15,6 +19,10 @@ export const ProductActions = ({ product }: Props) => {
     setSelectedSize(event.target.value);
 
   const handleAddToCart = () => {
+    if (!session?.user.id) {
+      alert("You must be logged in to add items to the cart");
+      return;
+    }
     if (selectedSize === null) {
       alert("Select a size");
       return;
@@ -44,13 +52,15 @@ export const ProductActions = ({ product }: Props) => {
             </div>
           ))}
         </div>
-        <button
+        <Button
           onClick={handleAddToCart}
-          className={styles.addToCartButton}
           disabled={isPending}
+          variant="primary"
+          size="large"
         >
-          Agregar al carrito
-        </button>
+          <FaCartShopping />
+          Add to Cart
+        </Button>
       </div>
     </div>
   );

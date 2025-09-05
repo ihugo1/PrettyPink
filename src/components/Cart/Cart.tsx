@@ -66,7 +66,6 @@ export const Cart = ({ isOpen, hanldeCloseCart }: Props) => {
               </p>
               <div className={styles.cartAction}>
                 <button>Checkout</button>
-                <button>EmptyCart</button>
               </div>
             </>
           )}
