@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import type { Session } from "../types/auth";
 import { getUser, authSignOut, authSignInWithGoogle } from "../api/authService";
+import { useNavigate } from "react-router-dom";
 
 interface AuthContextType {
   session: Session | null;
@@ -18,6 +19,7 @@ interface AuthContextProps {
 export const AuthProvider = ({ children }: AuthContextProps) => {
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleAuth = async () => {
@@ -52,6 +54,7 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
             "supabase.auth.session",
             JSON.stringify(newSession)
           );
+          navigate("/"); // Redirect to home page after successful login
         } catch (error) {
           console.error(
             "Error al obtener usuario después de redirección:",
