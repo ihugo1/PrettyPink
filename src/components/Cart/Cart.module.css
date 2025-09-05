@@ -157,6 +157,14 @@
   border-radius: var(--border-radius);
 }
 
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
 @media (max-width: 992px) {
   .cartContainer{
     width: 70%;
