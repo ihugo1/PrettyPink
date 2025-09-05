@@ -1,4 +1,4 @@
-import { apiFetch } from "./client";
+import { apiFetch, type APIResponse } from "./client";
 import type { Cart } from "../types";
 
 export const getCart = async (userId: string) => {

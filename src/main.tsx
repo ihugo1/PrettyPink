@@ -12,7 +12,7 @@ const queryClient = new QueryClient(); // <-- Define tu QueryClient aquí
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/PrettyPink">
+      <BrowserRouter>
         <ScrollToTop />
         <App />
       </BrowserRouter>
