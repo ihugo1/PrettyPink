@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
       setSession(null);
       localStorage.removeItem("supabase.auth.session");
       setIsLoading(false);
-      window.location.href = "/";
+      navigate("/");
     }
   };
 
