@@ -3,22 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Single Page App Redirect</title>
-    <script type="text/javascript">
-      // Don't re-execute this script if we're being redirected from a 404.
-      if (sessionStorage.getItem('redirect') !== null) {
-        sessionStorage.removeItem('redirect');
-      } else {
-        // Store the full path in session storage.
-        var path = window.location.pathname;
-        if (path.startsWith('/PrettyPink/')) {
-          path = path.substring('/PrettyPink'.length);
-        }
-        sessionStorage.setItem('redirect', path);
-
-        // Redirect to the root of the project.
-        window.location.href = '/PrettyPink/';
-      }
+    <script>
+      sessionStorage.redirect = location.href;
     </script>
+    <meta http-equiv="refresh" content="0;URL='/PrettyPink/'">
   </head>
   <body>
   </body>
