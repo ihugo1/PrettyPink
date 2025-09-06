@@ -3,7 +3,9 @@ import type { User } from "../types/auth";
 import { apiFetch, type APIResponse } from "./client";
 
 export const authSignInWithGoogle = () => {
-  const redirectUrl = window.location.origin;
+  const redirectUrl = import.meta.env.PROD
+    ? `${window.location.origin}/PrettyPink/`
+    : window.location.origin;
   const supabaseAuthUrl = `${baseURL}/auth/v1/authorize?provider=google&redirect_to=${redirectUrl}`;
   window.location.href = supabaseAuthUrl;
 };
