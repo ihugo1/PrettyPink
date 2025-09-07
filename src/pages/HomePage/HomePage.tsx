@@ -9,21 +9,21 @@ import { IoIosStar, IoIosTime } from "react-icons/io";
 
 export const HomePage = () => {
   const {
-    products: bestSellers,
-    isLoading: isBestSellersLoading,
-    error: bestSellersError,
-  } = useGetProductList({
-    itemsPerPage: 3,
-    sortedBy: "sales_count.desc",
-  });
-
-  const {
     products: newest,
     isLoading: isNewestLoading,
     error: newestError,
   } = useGetProductList({
     itemsPerPage: 3,
     sortedBy: "created_at.asc",
+  });
+
+  const {
+    products: bestSellers,
+    isLoading: isBestSellersLoading,
+    error: bestSellersError,
+  } = useGetProductList({
+    itemsPerPage: 3,
+    sortedBy: "sales_count.desc",
   });
 
   return (

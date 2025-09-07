@@ -17,7 +17,7 @@ export const ProductPage = () => {
     error: relatedError,
   } = useGetProductList({
     itemsPerPage: 4,
-    sortedBy: "sales_count.asc",
+    sortedBy: "sales_count.desc",
     categoryId: product?.category.id,
   });
 

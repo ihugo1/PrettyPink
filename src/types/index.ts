@@ -28,7 +28,7 @@ export type Cart = {
   id: string;
   user_id: string;
   date: Date;
-  cart_items?: CartItem[];
+  cart_items: CartItem[];
 }
 
 export type CartItem = {
