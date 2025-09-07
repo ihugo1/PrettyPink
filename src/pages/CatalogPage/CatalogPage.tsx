@@ -5,7 +5,7 @@ import { ProductGrid } from "../../components/ProductGrid/ProductGrid";
 import { ProductSorter } from "./ProductSorter/ProductSorter";
 import { useGetProductList } from "../../hooks/products/useGetProductList";
 import { AsyncDataHandler } from "../../components/AsyncDataHandler/AsyncDataHandler";
-import type { ProductSortOptions } from "../../api/productsService";
+import type { ProductSortOptions } from "../../constants/productSort";
 import { useSearchParams } from "react-router-dom";
 import hero from "../../assets/images/anastasiia-nelen-6QHLVv84Dqo-unsplash.webp";
 

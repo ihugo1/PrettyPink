@@ -1,6 +1,6 @@
 import styles from "./ProductSorter.module.css";
-import { productSortDisplayOptions } from "../../../api/productsService";
-import type { ProductSortOptions } from "../../../api/productsService";
+import { useProductSortOptions } from "../../../hooks/products/useProductSortOptions";
+import type { ProductSortOptions } from "../../../constants/productSort";
 
 interface Props {
   sortedBy: ProductSortOptions;
@@ -8,13 +8,15 @@ interface Props {
 }
 
 export const ProductSorter = ({ setSortedBy, sortedBy }: Props) => {
+  const { options } = useProductSortOptions();
+
   return (
     <select
-    className={styles.productSorter}
+      className={styles.productSorter}
       value={sortedBy}
       onChange={(e) => setSortedBy(e.target.value as ProductSortOptions)}
     >
-      {productSortDisplayOptions.map((option) => (
+      {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
         </option>

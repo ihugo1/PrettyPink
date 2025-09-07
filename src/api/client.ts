@@ -17,12 +17,12 @@ export const apiFetch = async <T>(
   const { headers, ...restOfOptions } = options;
   const finalOptions = {
     ...restOfOptions,
-     headers: {
-       apikey: supabaseKey,
-       "Content-Type": "application/json",
-      ...headers
-     }
-  }
+    headers: {
+      apikey: supabaseKey,
+      "Content-Type": "application/json",
+      ...headers,
+    },
+  };
   const finalURL = supabaseUrl + endpoint;
   const response = await fetch(finalURL, finalOptions);
 
@@ -35,6 +35,7 @@ export const apiFetch = async <T>(
 
   const contentRange = response.headers.get("Content-Range");
   const count = contentRange ? parseInt(contentRange.split("/")[1]) : null;
+  
   const data = await response.json();
 
   return { data, count };

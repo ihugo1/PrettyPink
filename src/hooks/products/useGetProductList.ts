@@ -1,6 +1,16 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { getProducts } from "../../api/productsService";
+import type { Product } from "../../types";
 import type { ProductSortOptions } from "../../api/productsService";
+
+interface UseGetProductListReturn {
+  products: Product[];
+  isLoading: boolean;
+  error: Error | null;
+  fetchNextPage: () => void;
+  hasNextPage: boolean;
+  isFetchingNextPage: boolean;
+}
 
 interface useGetProductsParams {
   itemsPerPage?: number;
@@ -12,7 +22,7 @@ export const useGetProductList = ({
   itemsPerPage = 10,
   sortedBy = "sales_count.asc",
   categoryId,
-}: useGetProductsParams = {}) => {
+}: useGetProductsParams): UseGetProductListReturn => {
   const {
     data,
     isLoading,

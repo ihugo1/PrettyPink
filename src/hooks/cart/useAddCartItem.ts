@@ -2,13 +2,18 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addItemToCart } from "../../api/cartService";
 import { useAuth } from "../../context/AuthContext";
 
-export const useAddCartItem = () => {
+interface UseAddCartItemReturn {
+  addCartItem: (variables: { productId: string; size: string }) => void;
+  isPending: boolean;
+}
+
+export const useAddCartItem = (): UseAddCartItemReturn => {
   const queryClient = useQueryClient();
   const { session } = useAuth();
 
   const { mutate: addCartItem, isPending } = useMutation({
     mutationFn: async (variables: { productId: string; size: string }) => {
-      if (!session?.user.id) {
+      if (!session?.user.id || !session.access_token) {
         throw new Error("User is not authenticated");
       }
       return addItemToCart(

@@ -1,7 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { getProductById } from "../../api/productsService";
+import type { Product } from "../../types";
 
-export const useGetProductById = (id: string | undefined) => {
+interface UseGetProductByIdReturn {
+  product: Product | undefined;
+  isLoading: boolean;
+  error: Error | null;
+}
+
+export const useGetProductById = (id: string | undefined): UseGetProductByIdReturn => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["product", id],
     queryFn: async () => {
