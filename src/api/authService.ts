@@ -30,7 +30,6 @@ export const authSignOut = async (accessToken: string): Promise<APIResponse<any>
       Authorization: `Bearer ${accessToken}`,
     },
   };
-  console.log("Signing out with accessToken:", accessToken); 
   const response = await apiFetch<any>(endpoint, options);
   return response;
 };

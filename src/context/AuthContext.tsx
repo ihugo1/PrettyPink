@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 import type { Session } from "../types/auth";
 import { getUser, authSignOut, authSignInWithGoogle } from "../api/authService";
 import { useNavigate } from "react-router-dom";
+import { STORAGE_KEYS } from "../constants/storage";
 
 interface AuthContextType {
   session: Session | null;
@@ -51,7 +52,7 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
 
           setSession(newSession);
           localStorage.setItem(
-            "supabase.auth.session",
+            STORAGE_KEYS.AUTH_SESSION,
             JSON.stringify(newSession)
           );
           navigate("/"); // Redirect to home page after successful login
@@ -61,21 +62,21 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
             error
           );
           setSession(null);
-          localStorage.removeItem("supabase.auth.session");
+          localStorage.removeItem(STORAGE_KEYS.AUTH_SESSION);
         }
       } else {
-        const storedSession = localStorage.getItem("supabase.auth.session");
+        const storedSession = localStorage.getItem(STORAGE_KEYS.AUTH_SESSION);
         if (storedSession) {
           try {
             const parsedSession: Session = JSON.parse(storedSession);
             if (parsedSession.expires_at > Math.floor(Date.now() / 1000)) {
               setSession(parsedSession);
             } else {
-              localStorage.removeItem("supabase.auth.session");
+              localStorage.removeItem(STORAGE_KEYS.AUTH_SESSION);
             }
           } catch (error) {
             console.error("Error al parsear sesión de localStorage:", error);
-            localStorage.removeItem("supabase.auth.session");
+            localStorage.removeItem(STORAGE_KEYS.AUTH_SESSION);
           }
         }
       }
@@ -99,13 +100,12 @@ export const AuthProvider = ({ children }: AuthContextProps) => {
         );
       }
       setSession(null);
-      localStorage.removeItem("supabase.auth.session");
+      localStorage.removeItem(STORAGE_KEYS.AUTH_SESSION);
     } catch (error) {
-      console.error("Error al cerrar sesión:", error);
       console.error("Error during server-side sign out:", error);
     } finally {
       setSession(null);
-      localStorage.removeItem("supabase.auth.session");
+      localStorage.removeItem(STORAGE_KEYS.AUTH_SESSION);
       setIsLoading(false);
       navigate("/");
     }
