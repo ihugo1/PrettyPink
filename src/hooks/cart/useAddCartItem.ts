@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addItemToCart } from "../../api/cartService";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-hot-toast";
 
 interface UseAddCartItemReturn {
   addCartItem: (variables: { productId: string; size: string }) => void;
@@ -26,6 +27,7 @@ export const useAddCartItem = (): UseAddCartItemReturn => {
 
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["Cart", session?.user.id] });
+      toast.success("Item added to cart");
     },
 
     onError: () => {

@@ -6,6 +6,7 @@ import { useRemoveCartItem } from "../../hooks/cart/useRemoveCartItem";
 import { FaCartShopping, FaX } from "react-icons/fa6";
 import { useLockScroll } from "../../hooks/utils/useLockScroll";
 import { AsyncDataHandler } from "../AsyncDataHandler/AsyncDataHandler";
+import toast from "react-hot-toast";
 
 interface Props {
   isOpen: boolean;
@@ -65,7 +66,7 @@ export const Cart = ({ isOpen, hanldeCloseCart }: Props) => {
                 Total: <strong>${data?.total}</strong>
               </p>
               <div className={styles.cartAction}>
-                <button>Checkout</button>
+                <button onClick={()=>{ toast.success("Hey, this is portfolio project heh, sadly you cannot but this")}}>Checkout</button>
               </div>
             </>
           )}

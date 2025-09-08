@@ -35,7 +35,7 @@ export const CatalogPage = () => {
 
   const handleFilterMenu = () => setIsFilterOpen(!isFilterOpen);
 
-  const { products, isLoading, error, hasNextPage, fetchNextPage } =
+  const { products, isLoading, error, hasNextPage, fetchNextPage, isFetchingNextPage } =
     useGetProductList({
       categoryId: categoryId,
       sortedBy: sortedBy,
@@ -78,6 +78,7 @@ export const CatalogPage = () => {
             products={products || []}
             hasNextPage={hasNextPage}
             fetchNextPage={fetchNextPage}
+            isFetchingNextPage={isFetchingNextPage}
           />
         </AsyncDataHandler>
       </div>

@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeItemFromCart } from "../../api/cartService";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-hot-toast";
 
 interface UseRemoveCartItemReturn {
   removeCartItem: (variables: { cartItemId: string }) => void;
@@ -21,6 +22,7 @@ export const useRemoveCartItem = (): UseRemoveCartItemReturn => {
 
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["Cart", session?.user.id] });
+      toast.success("Item removed from cart");
     },
 
     onError: () => {

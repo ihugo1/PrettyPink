@@ -33,6 +33,7 @@
 }
 
 .content {
+  min-height: 90vh;
   position: relative;
   width: 100%;
   display: flex;
@@ -52,7 +53,7 @@
   background-color: var(--background-color-light);
   border-right: 1px solid var(--background-color-light-border);
   display: none;
-    left: -100%;
+  left: -100%;
 }
 
 .active {

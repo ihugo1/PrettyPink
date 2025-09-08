@@ -1,6 +1,7 @@
 import styles from "./ProductGrid.module.css";
 import type { Product } from "../../types";
 import { ProductCard } from "../ProductCard/ProductCard";
+import { Button } from "../Button/Button";
 
 interface ProductGridProps {
   products: Product[];
@@ -8,6 +9,7 @@ interface ProductGridProps {
   hasNextPage?: boolean;
   fetchNextPage?: () => void;
   icon?: React.ReactNode;
+  isFetchingNextPage?: boolean;
 }
 
 export const ProductGrid = ({
@@ -15,6 +17,7 @@ export const ProductGrid = ({
   title,
   hasNextPage,
   fetchNextPage,
+  isFetchingNextPage,
   icon,
 }: ProductGridProps) => {
   return (
@@ -34,7 +37,11 @@ export const ProductGrid = ({
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          {hasNextPage && <button onClick={fetchNextPage}>Load More</button>}
+          {hasNextPage && (
+            <Button onClick={fetchNextPage}>
+              {isFetchingNextPage ? "Loading..." : "Load More"}
+            </Button>
+          )}
         </>
       )}
     </div>

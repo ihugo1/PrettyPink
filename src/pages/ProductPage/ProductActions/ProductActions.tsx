@@ -5,6 +5,7 @@ import { useAddCartItem } from "../../../hooks/cart/useAddCartItem";
 import { Button } from "../../../components/Button/Button";
 import { FaCartShopping } from "react-icons/fa6";
 import { useAuth } from "../../../context/AuthContext";
+import { toast } from "react-hot-toast";
 
 interface Props {
   product: Product;
@@ -20,11 +21,11 @@ export const ProductActions = ({ product }: Props) => {
 
   const handleAddToCart = () => {
     if (!session?.user.id) {
-      alert("You must be logged in to add items to the cart");
+      toast.error("You must be logged in to add items to the cart");
       return;
     }
     if (selectedSize === null) {
-      alert("Select a size");
+      toast.error("You must select a size to add to the cart");
       return;
     }
     addCartItem({ size: selectedSize, productId: product.id });
