@@ -197,7 +197,7 @@ export const ProductEditor = ({
 
             <div className={styles.formActions}>
               <Button type="submit">
-                {isPending
+                {isUpdating || isCreating
                   ? isEditMode
                     ? "Saving..."
                     : "Creating..."
