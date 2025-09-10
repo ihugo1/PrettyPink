@@ -116,7 +116,6 @@ export const ProductEditor = ({
     onClose();
   };
 
-  const isPending = isCreating;
 
   if (!isOpen) {
     return null;
