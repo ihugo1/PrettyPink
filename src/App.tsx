@@ -1,10 +1,11 @@
-import { Toaster } from "react-hot-toast";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { CatalogPage } from "./pages/CatalogPage/CatalogPage";
 import { ProductPage } from "./pages/ProductPage/ProductPage";
-import { Routes, Route } from "react-router-dom";
+import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { Footer } from "./components/Footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 export const App = () => {
   return (
@@ -38,6 +39,7 @@ export const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </main>
       <Footer />

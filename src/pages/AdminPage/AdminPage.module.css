@@ -1,0 +1,81 @@
+.adminPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  gap: var(--spacing-md);
+  background-color: var(--background-color);
+  color: var(--text-light-color);
+}
+
+.adminBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  border: 2px solid var(--background-color-border);
+  border-radius: var(--border-radius);
+  color: var(--text-dark-color);
+}
+
+.productlist {
+  height: 70vh;
+  overflow-y: scroll;
+  width: 100%;
+  border: 2px solid var(--background-color-border);
+  border-radius: var(--border-radius);
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productTable th,
+.productTable td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--background-color-border);
+  vertical-align: middle;
+}
+
+.productTable th {
+  background-color: var(--background-color-border);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.productTable tbody tr:nth-child(even) {
+  background-color: var(--background-color-secondary);
+}
+
+.productTable tbody tr:hover {
+  background-color: var(--primary-color-light);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.productlist::-webkit-scrollbar {
+  width: 12px;
+}
+
+.productlist::-webkit-scrollbar-track {
+  background: var(--background-color-secondary);
+  border-radius: var(--border-radius);
+}
+
+.productlist::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: 3px solid var(--background-color-secondary);
+}
+
+.productlist::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color-dark);
+}

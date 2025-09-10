@@ -78,6 +78,7 @@ button{
 
   /* Colors */
   --background-color: #1d1d1d;
+  --background-color-border: rgb(47, 47, 47);
   --background-color-hover: #252525;
 
   --background-color-light: #f5f5f5;
@@ -90,4 +91,5 @@ button{
   --secondary-color-hover: #d2d2d2;
 
   --text-light-color: #e6e6e6;
+  --text-dark-color: rgb(47, 47, 47);
 }
